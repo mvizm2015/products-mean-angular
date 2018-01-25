@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 // Import the Http Module and our Data Service
 import { HttpModule } from '@angular/http';
 import { DataService } from './data.service';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
