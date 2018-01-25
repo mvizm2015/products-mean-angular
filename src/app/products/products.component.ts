@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
+import { PRODUCTS } from './../mock-products';
+
 
 @Component({
   selector: 'app-products',
@@ -8,15 +10,7 @@ import { Product } from '../product';
 })
 export class ProductsComponent implements OnInit {
 
-  product: Product = {
-    id: 1,
-    name: 'Macbook Pro',
-    description: 'Brand New!',
-    price: 2000,
-    rating: '10/10',
-    seller: 'Barb',
-    warranty: '1 year'
-  };
+  product = PRODUCTS;
 
   constructor() { }
 

@@ -6,3 +6,33 @@
 <div><span>Rating: </span>{{product.rating}}</div>
 <div><span>Warranty: </span>{{product.warranty}}</div>
 <div><span>Seller: </span>{{product.seller}}</div>
+
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead class="thead-inverse">
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Price</th>
+                <th class="text-center">Rating</th>
+                <th class="text-center">Warranty</th>
+                <th class="text-center">Seller</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let product of _productsArray">
+                <td class="text-center" style="width: 15px;">{{product.id}}</td>
+                <td class="text-center" style="width: 15px;">{{product.name}}</td>
+                <td class="text-center" style="width: 200px;">{{product.description}}</td>
+                <td class="text-center">{{product.price}}</td>
+                <td class="text-center">{{product.rating}}</td>
+                <td class="text-center">{{product.warranty}}</td>
+                <td class="text-center">{{product.seller}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
