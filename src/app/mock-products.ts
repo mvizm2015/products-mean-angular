@@ -8,7 +8,7 @@ export const PRODUCTS: Product[] = [
         price: 2000,
         rating: '10/10',
         seller: 'Barb',
-         warranty: '1 year'
+        warranty: '1 year'
         },
         {
         id: 2,
