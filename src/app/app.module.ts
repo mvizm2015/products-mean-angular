@@ -10,17 +10,20 @@ import { HttpModule } from '@angular/http';
 import { DataService } from './data.service';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,              // <-Add HttpModule
-    FormsModule,
+    FormsModule, AppRoutingModule,
   ],
   providers: [DataService], // <-Add DataService
   bootstrap: [AppComponent]
