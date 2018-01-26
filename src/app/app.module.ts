@@ -23,7 +23,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     HttpModule,              // <-Add HttpModule
-    FormsModule, AppRoutingModule,
+    FormsModule, 
+    AppRoutingModule,
   ],
   providers: [DataService], // <-Add DataService
   bootstrap: [AppComponent]

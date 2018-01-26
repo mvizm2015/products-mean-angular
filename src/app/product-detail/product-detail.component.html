@@ -1,4 +1,4 @@
-<div *ngIf="product">
+<!-- <div *ngIf="product">
 
     <h2>{{ product.name }} Details</h2>
     <div><span>id: </span>{{product.id}}</div>
@@ -8,5 +8,10 @@
     <div><span>Warranty: </span>{{product.warranty}}</div>
     <div><span>Seller: </span>{{product.seller}}</div>
   
-  </div>
+  </div> -->
 
+  <div *ngIf="product">
+      <h2>{{ product.name }} Details</h2>
+      <div><span>id: </span>{{product.id}}</div> -->
+      <button (click)="goBack()">go back</button>
+    </div>

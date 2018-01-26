@@ -1,4 +1,4 @@
-<ul class="products">
+<!-- <ul class="products">
     <li *ngFor="let product of products" (click)="onSelect(product)">
       <span class="badge">{{product.id}}</span> {{product.name}}
     </li>
@@ -12,6 +12,13 @@
   <div><span>Rating: </span>{{selectedProduct.rating}}</div>
   <div><span>Warranty: </span>{{selectedProduct.warranty}}</div>
   <div><span>Seller: </span>{{selectedProduct.seller}}</div>
-</div>
+</div> -->
 
-<app-product-detail [product]="selectedProduct"></app-product-detail>
+<h2>My Products</h2>
+<ul class="products">
+  <li *ngFor="let product of products">
+    <a routerLink="/detail/{{product.id}}">
+      <span class="badge">{{product.id}}</span> {{product.name}}
+    </a>
+  </li>
+</ul>
