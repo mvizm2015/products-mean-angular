@@ -1,43 +1,15 @@
-
-<h2>{{product.name}} Details</h2>
 <ul class="products">
     <li *ngFor="let product of products" (click)="onSelect(product)">
       <span class="badge">{{product.id}}</span> {{product.name}}
     </li>
-  </ul>
+</ul>
 
-  <div *ngIf="selectedProduct">
+<div *ngIf="selectedProduct">
 
   <h2>{{selectedProduct.name}} Details</h2>
-  <div><span>description: </span>{{selectedProduct.description}}</div>
-
-  </div>
-
-<div class="container">
-    <div class="row">
-        <table class="table">
-            <thead class="thead-inverse">
-            <tr>
-                <th class="text-center">ID</th>
-                <th class="text-center">Name</th>
-                <th class="text-center">Description</th>
-                <th class="text-center">Price</th>
-                <th class="text-center">Rating</th>
-                <th class="text-center">Warranty</th>
-                <th class="text-center">Seller</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let product of _productsArray">
-                <td class="text-center" style="width: 15px;">{{product.id}}</td>
-                <td class="text-center" style="width: 15px;">{{product.name}}</td>
-                <td class="text-center" style="width: 200px;">{{product.description}}</td>
-                <td class="text-center">{{product.price}}</td>
-                <td class="text-center">{{product.rating}}</td>
-                <td class="text-center">{{product.warranty}}</td>
-                <td class="text-center">{{product.seller}}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+  <div><span>Description: </span>{{selectedProduct.description}}</div>
+  <div><span>Price: </span>${{selectedProduct.price}}</div>
+  <div><span>Rating: </span>{{selectedProduct.rating}}</div>
+  <div><span>Warranty: </span>{{selectedProduct.warranty}}</div>
+  <div><span>Seller: </span>{{selectedProduct.seller}}</div>
 </div>

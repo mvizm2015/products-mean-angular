@@ -1,12 +1,12 @@
 /* Application-wide Styles */
 
 h1 {
-    color: rgb(174, 69, 209);
+    color: rgba(91, 45, 61, 0.79);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%;
   }
   h2, h3 {
-    color: rgb(60, 76, 196);
+    color: rgba(91, 45, 61, 0.79);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
   }
@@ -14,7 +14,7 @@ h1 {
     margin: 1.5em;
   }
   body, input[text], button {
-    color: rgb(157, 133, 133);
+    color: rgba(173, 54, 95, 0.79);
     font-family: Cambria, Georgia;
   }
   /* everywhere else */
