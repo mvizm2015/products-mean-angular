@@ -55,3 +55,9 @@
   <button (click)="goBack()">Back</button>
   <button (click)="save()">Save</button>
 </div>
+
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/product-edit', product._id]" class="btn btn-success">Edit Product</a>
+  </div>
+</div>

@@ -7,14 +7,16 @@ import { ProductsComponent }    from './products/products.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
-
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'detail/:id', component: ProductDetailComponent },
   { path: 'products', component: ProductsComponent},
-  { path: 'product-create', component: ProductCreateComponent }
+  { path: 'product-create', component: ProductCreateComponent },
+  { path: 'product-edit/:id', component: ProductEditComponent },
+
 ];
 
 @NgModule({

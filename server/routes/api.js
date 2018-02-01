@@ -46,6 +46,15 @@ router.get('/api/products', (req, res) => {
             });
     });
 });
+
+// Save Product
+router.post('/api/products', (req, res, next) => {
+    product.create(req.body, (err, post) => {
+        if (err) return next(err);
+        res.json(post);
+    });
+});
+
 // router.get('/products', (req, res) => {
 // db.products.find((err, res)=>{
 //     console.log(res)

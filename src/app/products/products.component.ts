@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
 
   constructor(private _dataService: DataService) {
 
-    // Access the Data Service's getProducts() method we defined
+    // Access the Data Service's getProducts() method defined
     this._dataService.getProducts()
       .subscribe((data) => {
         var body = data["_body"];

@@ -13,4 +13,7 @@ export class ProductService {
     return PRODUCTS;
   }
 
+  saveProduct(): Product[] {
+    return PRODUCTS;
+  }
 }
