@@ -1,4 +1,4 @@
-<!-- <div *ngIf="product">
+<div *ngIf="product">
 
     <h2>{{ product.name }} Details</h2>
     <div><span>id: </span>{{product.id}}</div>
@@ -8,10 +8,36 @@
     <div><span>Warranty: </span>{{product.warranty}}</div>
     <div><span>Seller: </span>{{product.seller}}</div>
   
-  </div> -->
-
+  </div>
+<!-- 
   <div *ngIf="product">
       <h2>{{ product.name }} Details</h2>
-      <div><span>id: </span>{{product.id}}</div> -->
+      <div><span>id: </span>{{product.id}}</div> 
       <button (click)="goBack()">go back</button>
-    </div>
+    </div> -->
+
+
+<!-- <h2>My Products</h2>
+<ul class="products">
+  <li *ngFor="let product of products">
+    <a routerLink="/detail/{{product.id}}">
+      <span class="badge">{{product.id}}</span> {{product.name}}
+    </a>
+  </li>
+</ul> -->
+
+<ul class="products">
+    <li *ngFor="let product of products" (click)="onSelect(product)">
+      <span class="badge">{{product.id}}</span> {{product.name}}
+    </li>
+</ul>
+
+<div *ngIf="selectedProduct">
+
+  <h2>{{selectedProduct.name}} Details</h2>
+  <div><span>Description: </span>{{selectedProduct.description}}</div>
+  <div><span>Price: </span>${{selectedProduct.price}}</div>
+  <div><span>Rating: </span>{{selectedProduct.rating}}</div>
+  <div><span>Warranty: </span>{{selectedProduct.warranty}}</div>
+  <div><span>Seller: </span>{{selectedProduct.seller}}</div>
+</div>
