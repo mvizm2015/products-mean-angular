@@ -43,3 +43,15 @@
   <div><span>Warranty: </span>{{selectedProduct.warranty}}</div>
   <div><span>Seller: </span>{{selectedProduct.seller}}</div>
 </div>
+
+<div *ngIf="product">
+  <h2>{{product.name}} details!</h2>
+  <div>
+    <label>id: </label>{{product.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="product.name" placeholder="name" />
+  </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>
