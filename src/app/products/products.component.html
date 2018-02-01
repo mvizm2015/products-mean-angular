@@ -24,7 +24,7 @@
 </ul>
 
 <!-- <tr *ngFor="let product of products"> -->
-<td>
+<!-- <td>
 <input type="text"  name="select product">
 </td>
 <tr>
@@ -44,6 +44,11 @@
 <tr>
   <button (click)='delete()' class='btn btn-danger'> Delete
   </button>
-</tr>
+</tr> -->
 <!-- </tr> -->
 
+<h3>Add a Product
+  <a [routerLink]="['/product-create']" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </a>
+</h3>

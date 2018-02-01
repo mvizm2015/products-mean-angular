@@ -1,3 +1,7 @@
+import { PRODUCTS } from './../mock-products';
+import { Product } from './../product';
+import { DataService } from './../data.service';
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +11,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCreateComponent implements OnInit {
 
-  constructor() { }
+  products = PRODUCTS;
+
+  selectedProduct: Product;
+
+  constructor(
+    private route: ActivatedRoute,
+    private dataService: DataService,
+    private location: Location
+  ) { }
 
   ngOnInit() {
+  }
+
+  saveProduct() {
+    this.dataService.post('/product', this.product)
+    .subscribes(res => {
+      let id = res['_id'];
+      this.route.navigate(['/product-detail', id]);
+    }, (err) => {
+      console.log(err);
+    }
+    );
   }
 
 }
